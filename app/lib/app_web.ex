@@ -23,6 +23,7 @@ defmodule AppWeb do
       import Plug.Conn
       import AppWeb.Router.Helpers
       import AppWeb.Gettext
+      alias App.User
     end
   end
 
