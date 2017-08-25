@@ -1,7 +1,7 @@
 defmodule AppWeb.RegistrationController do
     use AppWeb, :controller
 
-    plug :action
+    # plug :action
 
     def new(conn, _params) do
         changeset = User.changeset(%User{})

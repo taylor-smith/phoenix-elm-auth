@@ -25,10 +25,10 @@ defmodule App.User do
   def changeset(%User{} = user, attrs \\ %{}) do
     user
     |> cast(attrs, @required_fields, @optional_fields)
-    |> unique_constraint(:email)
+    |> unique_constraint(:email, message: "this username already exists")
     |> validate_length(:password, min: 1)
     |> validate_length(:password_confirmation, min: 1)
-    |> validate_confirmation(:password, message: "password does not match")
+    |> validate_confirmation(:password)
   end
 
   def create(changeset, repo) do
