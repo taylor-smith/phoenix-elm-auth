@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <div id="elm-main"></div>
     <div class="container">
       <header class="header">
         <nav role="navigation">

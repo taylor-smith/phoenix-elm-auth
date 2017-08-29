@@ -1,7 +1,7 @@
-module main exposing (..)
+module Main exposing (..)
 
 import Html exposing (text, Html)
 
 main : Html a
 main =
-    text "Hello Foo"
+    text "Hello Fooasgasgasgasfsafasfasfasf "

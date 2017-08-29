@@ -27,3 +27,7 @@ npm-debug.log
 /config/*.secret.exs
 
 elm-stuff
+
+# This makes me feel terrible but it'll have to do until I figure something else out
+# Ignore compiled Elm source
+assets/js/main.js
