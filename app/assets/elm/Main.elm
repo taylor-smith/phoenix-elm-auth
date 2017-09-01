@@ -9,10 +9,6 @@ import View exposing (view)
 
 import Html exposing (text, Html)
 
--- main : Html a
--- main =
---     text "Hello Fooasgasgasgasfsafasfasfasf "
-
 init : Navigation.Location -> ( Model, Cmd Msg )
 init location =
     let

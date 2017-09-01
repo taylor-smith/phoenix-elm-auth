@@ -2,6 +2,7 @@ module View exposing (..)
 
 import Common.View exposing (warningMessage, backToHomeLink)
 import Index.View exposing (indexView)
+import Nav.View exposing (navView)
 import Registration.View exposing (registrationView)
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -14,18 +15,18 @@ view : Model -> Html Msg
 view model =
     section
         []
-        [ headerView
+        [ headerView model
         , div[]
-            [ page model] 
+            [ page model ] 
         ]
 
-headerView : Html Msg
-headerView =
+headerView : Model -> Html Msg
+headerView model =
     header
         [ class "main-header" ]
-        [ h1
-            []
-            [ text "Nav nav nav"]
+        [
+            div[]
+                [ navView model ]
         ]
 
 page : Model -> Html Msg
