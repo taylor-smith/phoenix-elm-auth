@@ -18,7 +18,7 @@ toPath route =
             "/#/registration/"
         
         NotFoundRoute ->
-            "/#/404"
+            "/#/404/"
 
 matchers: Parser (Route -> a) a
 matchers =
