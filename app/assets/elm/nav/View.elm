@@ -17,7 +17,7 @@ navView model =
 
 viewLink : String -> Html msg
 viewLink name =
-    li [] [ a [ href ("/#" ++ name) ] [ text name ] ]
+    li [] [ a [ href ("/#/" ++ name) ] [ text name ] ]
 
 viewLocation : Navigation.Location -> Html msg
 viewLocation location =

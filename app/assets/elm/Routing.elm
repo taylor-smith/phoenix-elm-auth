@@ -12,24 +12,24 @@ toPath : Route -> String
 toPath route =
     case route of
         HomeIndexRoute ->
-            "/#"
+            "/#/"
         
         Registration ->
-            "/#registration"
+            "/#/registration/"
         
         NotFoundRoute ->
-            "/#404"
+            "/#/404"
 
 matchers: Parser (Route -> a) a
 matchers =
     oneOf
-        [ map HomeIndexRoute top
-        , map Registration (s "#registration")
+        [ map HomeIndexRoute <| s ""
+        , map Registration <| s "registration"
         ]
 
 parse : Navigation.Location -> Route
 parse location =
-    case UrlParser.parsePath matchers location of
+    case UrlParser.parseHash matchers location of
         Just route ->
             route
         Nothing ->
