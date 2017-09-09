@@ -1,0 +1,12 @@
+var _user$project$Model$initialModel = function (route) {
+	return {
+		route: route,
+		history: {ctor: '[]'},
+		username: '',
+		password: ''
+	};
+};
+var _user$project$Model$Model = F4(
+	function (a, b, c, d) {
+		return {route: a, history: b, username: c, password: d};
+	});

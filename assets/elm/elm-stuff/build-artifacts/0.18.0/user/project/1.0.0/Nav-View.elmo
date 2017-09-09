@@ -1,0 +1,97 @@
+var _user$project$Nav_View$viewLocation = function (location) {
+	return A2(
+		_elm_lang$html$Html$li,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(location.pathname),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Nav_View$viewLink = function (name) {
+	return A2(
+		_elm_lang$html$Html$li,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$a,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$href(
+						A2(_elm_lang$core$Basics_ops['++'], '/#/', name)),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(name),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Nav_View$navView = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h1,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Pages'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$ul,
+					{ctor: '[]'},
+					A2(
+						_elm_lang$core$List$map,
+						_user$project$Nav_View$viewLink,
+						{
+							ctor: '::',
+							_0: 'registration',
+							_1: {
+								ctor: '::',
+								_0: 'cats',
+								_1: {
+									ctor: '::',
+									_0: 'dogs',
+									_1: {
+										ctor: '::',
+										_0: 'elephants',
+										_1: {
+											ctor: '::',
+											_0: 'fish',
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						})),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$h1,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('History'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$ul,
+							{ctor: '[]'},
+							A2(_elm_lang$core$List$map, _user$project$Nav_View$viewLocation, model.history)),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};

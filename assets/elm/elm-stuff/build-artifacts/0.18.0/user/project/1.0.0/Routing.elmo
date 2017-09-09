@@ -1,0 +1,38 @@
+var _user$project$Routing$toPath = function (route) {
+	var _p0 = route;
+	switch (_p0.ctor) {
+		case 'HomeIndexRoute':
+			return '/#/';
+		case 'Registration':
+			return '/#/registration/';
+		default:
+			return '/#/404/';
+	}
+};
+var _user$project$Routing$NotFoundRoute = {ctor: 'NotFoundRoute'};
+var _user$project$Routing$Registration = {ctor: 'Registration'};
+var _user$project$Routing$HomeIndexRoute = {ctor: 'HomeIndexRoute'};
+var _user$project$Routing$matchers = _evancz$url_parser$UrlParser$oneOf(
+	{
+		ctor: '::',
+		_0: A2(
+			_evancz$url_parser$UrlParser$map,
+			_user$project$Routing$HomeIndexRoute,
+			_evancz$url_parser$UrlParser$s('')),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_evancz$url_parser$UrlParser$map,
+				_user$project$Routing$Registration,
+				_evancz$url_parser$UrlParser$s('registration')),
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Routing$parse = function (location) {
+	var _p1 = A2(_evancz$url_parser$UrlParser$parseHash, _user$project$Routing$matchers, location);
+	if (_p1.ctor === 'Just') {
+		return _p1._0;
+	} else {
+		return _user$project$Routing$NotFoundRoute;
+	}
+};
